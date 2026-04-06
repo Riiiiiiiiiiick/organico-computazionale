@@ -1,0 +1,254 @@
+h1, h3, .testata, .linkp {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(10, 10, 10);
+  font-family: "Helvetica";
+  color: silver;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.divtoplab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgb(10, 10, 10);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2em;
+  padding: 0em 2.2em 2.2em;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.column.testo, .column.foto {
+  max-width: 100%;
+  overflow-y: auto;
+  height: calc(100vh - 6.6em);
+  padding-right: 1em;
+}
+
+.column::-webkit-scrollbar {
+  width: 0.5px;
+}
+
+.column::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 1px;
+  min-height: 50px !important;
+}
+
+section {
+  margin-bottom: 2.2em;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.links {
+  color: silver;
+  text-decoration: none;
+  font-size: 15.5px;
+  font-weight: 200;
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+}
+
+.subheader,.subheaderpost {
+  font-weight: 200;
+  font-size: 15.5px;
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+  padding-bottom: 1.1em;
+  text-indent: 1.1em;
+  text-transform: lowercase;
+}
+
+.subheaderpost {
+  padding-top: 2.2em;
+}
+
+.texti {
+    font-style: italic;
+}
+
+.caption {
+    font-size: small;
+    font-weight: 200;
+    padding-top: 0.9em;
+    padding-bottom: 2.2em;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: lowercase;
+}
+
+h3 { 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.divtop {
+    width: 100%;
+}
+
+.labo,.tools,.ric,.ricl,.biblio{
+    text-align: left;
+    color: silver;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-style: normal;
+    font-size: small;
+    text-transform: lowercase;
+}
+
+.labo, .tools {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.labo:hover, .tools:hover {
+    text-underline-offset: 0.15em;
+    text-decoration: underline 0.15px solid silver;
+}
+
+.tools {
+    left: 50%;
+    /*transform: translateX(-50%);*/
+    padding-top: 2.2em;
+    padding-left: 1.1em;
+}
+
+.labo {
+    padding-top: 2.2em;
+    padding-left: 2.2em;
+}
+
+.ric {
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ricl{ 
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.biblio{
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ricl:hover, .links:hover {
+    text-underline-offset: 0.15em;
+    text-decoration: underline 0.15px solid silver;
+}
+
+.links:hover {
+  text-decoration: underline 0.15px solid silver;
+  text-underline-offset: 0.15em;
+}
+
+.columns {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.2em;
+    display: grid;
+}
+
+.biblio {
+    left: 50%;
+    padding-bottom: 2.2em;
+    padding-left: 1.1em;
+}
+
+.ric {
+    padding-bottom: 2.2em;
+    padding-left: 2.2em;
+}
+
+.contenuto {
+    max-width: 40em;
+    padding-top: 3.3em;
+    padding-left: 2.2em;
+}
+.testata {
+  font-size: 3.3em;
+  margin-top: 3.3em;
+  padding-left: 0.15em;
+  border-top: 0.15px solid silver;
+  border-left: 0.15px solid silver;
+}
+
+.divInt {
+    position: fixed;
+    display: block;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+    padding: 2.2em;
+    }
+    
+ .divExt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2em;
+      }
+
+.imgc{
+    padding-top: 10px;
+    border-top: 0.15px solid silver;
+    /*border-left: 0.15px solid silver;*/
+}
+
+img {
+    max-width:100%;
+    height:auto;
+    padding: 0px;
+    margin: 0px;
+    
+} 
+
+@media (max-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr;
+    padding: 2.2em;
+    top: 4.4em;
+  }
+  
+  .column.testo, .column.foto {
+    height: calc(100vh);
+  }
+}
